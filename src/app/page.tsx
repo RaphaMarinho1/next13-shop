@@ -1,5 +1,4 @@
 import { Roboto } from "@next/font/google";
-import styles from "./page.module.css";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -7,5 +6,9 @@ const roboto = Roboto({
 });
 
 export default function Home() {
-  return <main className={roboto.className}>Hello Ignite Shop</main>;
+  return (
+    <main className={roboto.className}>
+      <p className="text-3xl font-bold underline">Hello world</p>
+    </main>
+  );
 }
