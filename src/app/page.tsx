@@ -8,7 +8,7 @@ const roboto = Roboto({
 export default function Home() {
   return (
     <main className={roboto.className}>
-      <p className="text-3xl font-bold underline">Hello world</p>
+      <p className="text-3xl font-bold underline text-gray-700">Hello world</p>
     </main>
   );
 }
