@@ -21,6 +21,9 @@ module.exports = {
         900: "#121214",
       },
       white: "#FFFFFF",
+      black: "#000",
+      "gradient-green": "#1EA483",
+      "gradient-purple": "#7465D4",
     },
     fontSize: {
       sm: "0.875rem",
@@ -28,7 +31,7 @@ module.exports = {
       xl: "1.125rem",
       "2xl": "1.25rem",
       "3xl": "1.5rem",
-      "3xl": "2rem",
+      "4xl": "2rem",
     },
   },
   plugins: [],
