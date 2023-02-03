@@ -1,6 +1,8 @@
 import { Roboto } from "@next/font/google";
 import Product from "./Product";
 
+import Slider from "./Slider";
+
 const roboto = Roboto({
   subsets: ["latin"],
   weight: ["400", "700"],
@@ -8,11 +10,13 @@ const roboto = Roboto({
 
 export default function Home() {
   return (
-    <main
-      className={`${roboto.className} flex gap-12 ml-auto w-full max-w-[calc(100%-((100%-1180px)/2))] min-h-[656px]`}
-    >
-      <Product />
-      <Product />
+    <main className={`${roboto.className} `}>
+      <Slider>
+        <Product />
+        <Product />
+        <Product />
+        <Product />
+      </Slider>
     </main>
   );
 }

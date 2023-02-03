@@ -8,7 +8,8 @@ const Product = () => {
   return (
     <Link
       href="#"
-      className="group bg-gradient-to-b from-gradient-green to-gradient-purple rounded-lg p-1 relative flex items-center justify-center overflow-hidden"
+      className="group keen-slider__slide bg-gradient-to-b from-gradient-green to-gradient-purple rounded-lg 
+      relative flex items-center justify-center overflow-hidden"
     >
       <Image
         src={camiseta1}
