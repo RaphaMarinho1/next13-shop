@@ -2,9 +2,9 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-import camiseta1 from "src/assets/camisetas/1.png";
+import { ProductsResponse } from "../page";
 
-const Product = () => {
+const Product = ({ name, price, imagesUrl }: ProductsResponse) => {
   return (
     <Link
       href="#"
@@ -12,10 +12,10 @@ const Product = () => {
       relative flex items-center justify-center overflow-hidden"
     >
       <Image
-        src={camiseta1}
+        src={imagesUrl[0]}
         width={520}
         height={480}
-        alt="camiseta 1"
+        alt={name}
         className="object-cover"
       />
       <footer
@@ -23,8 +23,8 @@ const Product = () => {
         justify-between bg-black/60 p-8 font-bold translate-y-[110%] opacity-0 transition-all ease-in-out
         group-hover:translate-y-0 group-hover:opacity-100"
       >
-        <strong className="text-2xl text-gray-100">Camiseta x</strong>
-        <span className="text-3xl text-green-300">R$ 79.90</span>
+        <strong className="text-2xl text-gray-100">{name}</strong>
+        <span className="text-3xl text-green-300">{price}</span>
       </footer>
     </Link>
   );
