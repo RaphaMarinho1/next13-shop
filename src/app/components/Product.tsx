@@ -4,11 +4,11 @@ import Image from "next/image";
 
 import { ProductsResponse } from "../page";
 
-const Product = ({ name, price, imagesUrl }: ProductsResponse) => {
+const Product = ({ name, price, imagesUrl, id }: ProductsResponse) => {
   return (
     <Link
-      href="#"
-      className="group keen-slider__slide bg-gradient-to-b from-gradient-green to-gradient-purple rounded-lg 
+      href={`/product/${id}`}
+      className="group keen-slider__slide bg-product-gradient rounded-lg 
       relative flex items-center justify-center overflow-hidden"
     >
       <Image

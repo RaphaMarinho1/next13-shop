@@ -9,13 +9,6 @@ const roboto = Roboto({
   weight: ["400", "700"],
 });
 
-export interface ProductsResponse {
-  id: string;
-  name: string;
-  imagesUrl: string[];
-  price: string;
-}
-
 async function getProductsData() {
   const options = {
     method: "GET",
