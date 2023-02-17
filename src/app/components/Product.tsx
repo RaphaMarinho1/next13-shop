@@ -10,6 +10,7 @@ const Product = ({ name, price, imagesUrl, id }: ProductsResponse) => {
       href={`/product/${id}`}
       className="group keen-slider__slide bg-product-gradient rounded-lg 
       relative flex items-center justify-center overflow-hidden"
+      prefetch={false}
     >
       <Image
         src={imagesUrl[0]}

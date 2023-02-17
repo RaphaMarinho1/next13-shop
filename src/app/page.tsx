@@ -1,13 +1,15 @@
-import { Roboto } from "@next/font/google";
 import Product from "./components/Product";
+
 import { Stripe } from "stripe";
 
-import Slider from "./components//Slider";
+import Slider from "./components/Slider";
 
-const roboto = Roboto({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-});
+export interface ProductsResponse {
+  id: string;
+  name: string;
+  imagesUrl: string[];
+  price: string;
+}
 
 async function getProductsData() {
   const options = {
@@ -46,7 +48,7 @@ export default async function Home() {
   const products = await getProductsData();
 
   return (
-    <main className={roboto.className}>
+    <main>
       <Slider>
         {products.map((product) => (
           <Product key={product.id} {...product} />

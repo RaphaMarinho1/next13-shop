@@ -1,3 +1,5 @@
+const colors = require("tailwindcss/colors");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -24,6 +26,7 @@ module.exports = {
       black: "#000",
       "gradient-green": "#1EA483",
       "gradient-purple": "#7465D4",
+      purple: colors.purple,
     },
     fontSize: {
       sm: "0.875rem",
