@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Stripe } from "stripe";
+import BuyButton from "./BuyButton";
 
 async function getProductData(productId: string) {
   const options = {
@@ -28,13 +29,13 @@ async function getProductData(productId: string) {
       style: "currency",
       currency: "BRL",
     }).format(price.unit_amount ? price.unit_amount / 100 : 0),
+    defaultPriceId: price.id,
   };
 }
 
 export default async function Page({ params }: { params: { slug: string } }) {
-  const { price, imagesUrl, name, description } = await getProductData(
-    params.slug
-  );
+  const { price, imagesUrl, name, description, defaultPriceId } =
+    await getProductData(params.slug);
 
   return (
     <main className=" grid grid-cols-2 items-stretch gap-16 max-w-[1180px] my-0 mx-auto">
@@ -55,9 +56,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
           {description}
         </p>
 
-        <button className="mt-auto bg-green-500 border-0 text-white rounded-none p-5 cursor-pointer font-bold text-xl hover:bg-green-300">
-          Comprar agora
-        </button>
+        <BuyButton priceId={defaultPriceId} />
       </div>
     </main>
   );
