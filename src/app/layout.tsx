@@ -20,7 +20,7 @@ export default function RootLayout({
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body className="bg-gray-900">
+      <body className="bg-gray-900 text-gray-300">
         <div className="flex flex-col items-start min-h-screen justify-center">
           <Header />
           {children}
